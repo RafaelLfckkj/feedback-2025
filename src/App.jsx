@@ -1,4 +1,5 @@
 import IconStar from "./assets/icon-star.svg";
+import illustrantionThankYou from "./assets/illustration-thank-you.svg";
 import { useState } from "react";
 
 export function App() {
@@ -10,9 +11,9 @@ export function App() {
   }
 
   function handleSubmit() {
-    if (notaAvaliacao !== 0){
+    if (notaAvaliacao !== 0) {
       setSubmited(true);
-      return
+      return;
     }
 
     alert("Selecione uma nota antes...");
@@ -73,7 +74,15 @@ export function App() {
     </div>
   ) : (
     <div className="bg-gradient-dark text-white mx-6 p-6 rounded-2xl font-overpass">
-      <p>{notaAvaliacao}</p>
+      <img src={illustrantionThankYou} alt="illustrantion Thank You" className="mx-auto mb-6"/>
+
+      <p className="text-orange bg-dark-blue w-fit mx-auto px-3 py-1.25 rounded-3xl mb-6">You select {notaAvaliacao} out of 5</p>
+
+      <h1 className="text-2xl font-bold mb-2.5 text-center">Thank You!</h1>
+      <p className="text-sm text-light-grey leading-1 text-center">
+        We appreciate you taking the time to give a rating. If you ever need
+        more support, don’t hesitate to get in touch!
+      </p>
     </div>
   );
 }
