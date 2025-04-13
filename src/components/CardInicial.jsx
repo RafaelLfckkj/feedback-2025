@@ -1,7 +1,9 @@
 import IconStar from "../assets/icon-star.svg";
 import { InputButton } from "./InputButton";
 
-export function CardInicial({ handleMudarNotaAvaliacao, handleSubmit }) {
+export function CardInicial({ setNotaAvaliacao, handleSubmit }) {
+ 
+
   return (
     <div className="bg-gradient-dark text-white mx-6 p-6 rounded-2xl font-overpass max-w-103">
       <div className="bg-dark-blue w-fit p-4 rounded-full mb-4">
@@ -17,23 +19,23 @@ export function CardInicial({ handleMudarNotaAvaliacao, handleSubmit }) {
 
       <div className="flex justify-between mb-6">
         <InputButton
-          handleMudarNotaAvaliacao={handleMudarNotaAvaliacao}
+          setNotaAvaliacao={setNotaAvaliacao}
           value={1}
         />
         <InputButton
-          handleMudarNotaAvaliacao={handleMudarNotaAvaliacao}
+          setNotaAvaliacao={setNotaAvaliacao}
           value={2}
         />
         <InputButton
-          handleMudarNotaAvaliacao={handleMudarNotaAvaliacao}
+          setNotaAvaliacao={setNotaAvaliacao}
           value={3}
         />
         <InputButton
-          handleMudarNotaAvaliacao={handleMudarNotaAvaliacao}
+          setNotaAvaliacao={setNotaAvaliacao}
           value={4}
         />
         <InputButton
-          handleMudarNotaAvaliacao={handleMudarNotaAvaliacao}
+          setNotaAvaliacao={setNotaAvaliacao}
           value={5}
         />
       </div>
